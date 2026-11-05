@@ -1,0 +1,19 @@
+/* ---------- FAQ (native <details> — crawlable, accessible, works without JS) ---------- */
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,100px)}
+.faq-wrap .sec-head{grid-template-columns:1fr;position:sticky;top:120px;align-self:start}
+.faq-wrap .sec-head p{grid-column:1}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;text-align:start;font-size:clamp(19px,1.6vw,24px);letter-spacing:-.025em;font-weight:500}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary h3{font:inherit;letter-spacing:inherit}
+.qa summary:focus-visible{outline:2px solid var(--ember);outline-offset:6px;border-radius:6px}
+.qa .pm{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line2);position:relative;transition:transform .5s var(--ease),background .3s}
+.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.qa .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .5s var(--ease)}
+.qa[open] .pm{background:var(--ember);border-color:var(--ember);transform:rotate(180deg)}
+.qa[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.qa .ans p{padding:0 60px 30px 0;color:#BDB5A9;max-width:60ch}
+.qa[open] .ans{animation:faqIn .6s var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-8px)}}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr}.faq-wrap .sec-head{position:static}}

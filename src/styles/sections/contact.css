@@ -1,0 +1,10 @@
+/* ---------- Final CTA ---------- */
+.final{min-height:110vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px var(--pad)}
+.final .mono{color:var(--ember);margin-bottom:28px}
+.final h2{font-size:clamp(72px,15vw,260px);line-height:.82;letter-spacing:-.075em;font-weight:600;font-variation-settings:"opsz" 96}
+.final h2 .serif{font-weight:400;color:var(--ember)}
+.final p{max-width:44ch;color:#CFC7BB;font-size:clamp(18px,1.5vw,22px);margin:34px auto 40px}
+.final .ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.final .btn{height:66px;padding:0 34px;font-size:17px}
+.final .hours{margin-top:28px;color:var(--mute)}
+.nf-mark{width:90px;height:90px;margin-bottom:24px}

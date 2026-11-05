@@ -1,0 +1,39 @@
+/* ---------- Sound control (header) ---------- */
+.sound{position:relative;flex:none;opacity:0;transition:opacity .8s}
+.sound.ready{opacity:1}
+.snd-btn{display:flex;align-items:center;gap:10px;height:42px;padding:0 14px 0 12px;border-radius:100px;border:1px solid var(--line2);background:rgba(11,10,9,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:border-color .4s,box-shadow .4s,background .3s}
+.snd-btn:hover{background:rgba(237,230,218,.07)}
+.sound.on .snd-btn{border-color:rgba(255,91,31,.5);box-shadow:0 0 24px -6px rgba(255,91,31,.55)}
+.eq{display:flex;align-items:center;gap:2.5px;height:18px;width:22px}
+.eq i{flex:1;height:3px;border-radius:2px;background:var(--mute);transition:height .12s linear,background .3s}
+.sound.on .eq i{background:var(--ember)}
+.snd-txt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.sound.on .snd-txt{color:var(--ink)}
+/* dropdown volume panel */
+.snd-vol{position:absolute;top:calc(100% + 12px);inset-inline-end:0;width:250px;padding:16px 18px 14px;border-radius:18px;border:1px solid var(--line2);
+  background:rgba(16,14,12,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 30px 60px -20px rgba(0,0,0,.8);
+  opacity:0;transform:translateY(-8px) scale(.98);transform-origin:top right;pointer-events:none;transition:opacity .35s var(--ease),transform .5s var(--ease);direction:ltr}
+.snd-vol::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px} /* hover bridge */
+.sound:hover .snd-vol,.sound:focus-within .snd-vol,.sound.open .snd-vol{opacity:1;transform:none;pointer-events:auto}
+.snd-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:var(--font-mono),monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.snd-head output{color:var(--ink);font-size:12px}
+.snd-row{display:flex;align-items:center;gap:12px}
+.snd-row svg{flex:none;width:18px;height:18px;stroke:var(--mute);fill:none;stroke-width:1.6;cursor:pointer}
+.snd-row svg:hover{stroke:var(--ember)}
+.snd-vol input{-webkit-appearance:none;appearance:none;flex:1;height:4px;border-radius:4px;outline:none;cursor:pointer;
+  background:linear-gradient(90deg,var(--ember) var(--v,55%),rgba(237,230,218,.16) var(--v,55%))}
+.snd-vol input::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px rgba(255,91,31,.25),0 0 14px rgba(255,91,31,.6)}
+.snd-vol input::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px rgba(255,91,31,.25)}
+.snd-foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;justify-content:space-between}
+.snd-foot kbd{font-family:var(--font-mono),monospace;font-size:10px;border:1px solid var(--line2);border-radius:5px;padding:1px 6px;color:var(--ink)}
+.snd-tip{position:absolute;top:calc(100% + 14px);inset-inline-end:0;white-space:nowrap;background:var(--ink);color:var(--bg);padding:10px 15px;border-radius:12px;font-size:13.5px;font-weight:600;opacity:0;transform:translateY(-8px);transition:.6s var(--ease);pointer-events:none;cursor:pointer;z-index:2}
+.snd-tip::after{content:"";position:absolute;inset-inline-end:22px;top:-6px;width:12px;height:12px;background:var(--ink);transform:rotate(45deg)}
+.snd-tip.show{opacity:1;transform:none;pointer-events:auto}
+.sound:hover .snd-tip,.nav.is-hidden .snd-tip,.nav.is-hidden .snd-vol{opacity:0!important;pointer-events:none!important}
+.nav-cta .btn-primary .wa-i{width:18px;height:18px;margin-inline-end:-2px}
+@media (max-width:1280px){.snd-txt{display:none}.snd-btn{padding:0 10px;width:42px;justify-content:center}}
+@media (max-width:440px){.nav-cta{gap:8px}.nav-cta .btn-primary .lbl{display:none}.nav-cta .btn-primary{width:42px;padding:0;justify-content:center}.snd-vol,.snd-tip{position:fixed;top:70px;left:14px;right:14px;width:auto;transform-origin:top center}.snd-tip{white-space:normal}.snd-tip::after{inset-inline-end:auto;left:50%}}
+@media (hover:none){.sound:hover .snd-vol{opacity:0;pointer-events:none}.sound.open .snd-vol{opacity:1;pointer-events:auto;transform:none}}
+.snd-mute{display:grid;place-items:center;padding:0}
+.snd-mute svg{flex:none;width:18px;height:18px;stroke:var(--mute);fill:none;stroke-width:1.6;cursor:pointer}
+.snd-mute:hover svg{stroke:var(--ember)}

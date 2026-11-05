@@ -1,0 +1,34 @@
+/*
+ * Global stylesheet — imported once in the root layout.
+ * Order matters: tokens → reset → components → sections → language/motion overrides.
+ * Each file is scoped by its section/component class name; add new partials here.
+ */
+@import "./base/tokens.css";
+@import "./base/reset.css";
+@import "./base/utilities.css";
+
+@import "./components/stage.css";
+@import "./components/preloader.css";
+@import "./components/cursor.css";
+@import "./components/header.css";
+@import "./components/buttons.css";
+@import "./components/section-head.css";
+@import "./components/whatsapp-fab.css";
+@import "./components/language-switch.css";
+@import "./components/sound-control.css";
+
+@import "./sections/hero.css";
+@import "./sections/marquee.css";
+@import "./sections/manifesto.css";
+@import "./sections/features.css";
+@import "./sections/work.css";
+@import "./sections/expertise.css";
+@import "./sections/process.css";
+@import "./sections/pricing.css";
+@import "./sections/care.css";
+@import "./sections/faq.css";
+@import "./sections/contact.css";
+@import "./sections/footer.css";
+
+@import "./base/rtl.css";
+@import "./base/reduced-motion.css";

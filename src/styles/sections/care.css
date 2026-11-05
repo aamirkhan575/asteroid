@@ -1,0 +1,14 @@
+/* ---------- Care ---------- */
+.care{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:center}
+.care h2{font-size:clamp(48px,7.4vw,120px);line-height:.9;letter-spacing:-.06em;font-weight:600;font-variation-settings:"opsz" 96}
+.care h2 .serif{color:var(--ember);font-weight:400}
+.care .lede{font-size:clamp(18px,1.5vw,22px);color:#CFC7BB;margin:30px 0 0;max-width:40ch}
+.care-list{display:flex;flex-direction:column}
+.care-item{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--line)}
+.care-item:last-child{border-bottom:1px solid var(--line)}
+.care-item .ic{width:56px;height:56px;border-radius:16px;border:1px solid var(--line2);display:grid;place-items:center;background:rgba(255,91,31,.06)}
+.care-item .ic svg{width:26px;height:26px;stroke:var(--ember);fill:none;stroke-width:1.5}
+.care-item h3{font-size:22px;letter-spacing:-.03em;font-weight:600;margin-bottom:6px}
+.care-item p{color:#B3AB9F}
+@media (max-width:900px){.care{grid-template-columns:1fr}}
+.care-list{list-style:none}

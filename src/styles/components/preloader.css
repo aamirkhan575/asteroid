@@ -1,0 +1,13 @@
+/* ---------- Preloader ---------- */
+.loader{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad)}
+.loader .row{display:flex;justify-content:space-between;align-items:flex-end}
+.loader .count{font-size:clamp(80px,16vw,240px);font-weight:300;line-height:.8;letter-spacing:-.06em;font-variation-settings:"opsz" 96}
+.loader .bar{position:absolute;left:0;bottom:0;height:2px;background:var(--ember);width:0}
+.loader .tag{max-width:280px;color:var(--mute)}
+/* Safety net: if JS never runs, the loader fades out by itself (no blocked content). */
+.loader{animation:loaderFailsafe .5s ease 2.6s forwards}
+html.js-ready .loader{animation:none}
+@keyframes loaderFailsafe{to{opacity:0;visibility:hidden}}
+/* Repeat visits in the same session skip the loader entirely (see Preloader.tsx). */
+html.seen-loader .loader{display:none}
+.loader.is-leaving{transform:translateY(-100%);transition:transform .65s cubic-bezier(.87,0,.13,1)}

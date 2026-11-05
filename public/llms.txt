@@ -1,0 +1,31 @@
+# Asteroid
+
+> Asteroid is a premium website design agency in Dubai, United Arab Emirates. We design and build custom, bilingual (English/Arabic) and 3D/WebGL websites for businesses across the UAE and GCC.
+
+- Website: https://asteroid.design
+- Arabic site: https://asteroid.design/ar
+- Contact: WhatsApp / phone +971 55 283 0119 · hi@asteroid.design
+- Hours: Sunday–Friday, 9am–8pm (GST)
+- Location: Dubai, UAE (serving Dubai, Abu Dhabi, Sharjah and all emirates, plus the GCC)
+
+## Services
+- Website design in Dubai and across the UAE
+- 3D website design (WebGL, Three.js, motion)
+- Arabic & English bilingual websites with right-to-left layouts
+- SEO-ready development (performance, structured data, Search Console, Google Business Profile)
+- E-commerce and custom web features
+- Website care plans (updates, security, backups, yearly growth review)
+
+## Pricing (AED, fixed price agreed in writing)
+- Launch — from AED 10,000: up to 5 custom-designed pages, ~3 weeks
+- Growth — from AED 25,000: up to 12 pages, English + Arabic, bookings/forms, editing dashboard, ~5–6 weeks
+- Signature — AED 50,000+: 3D & interactive experiences, online store, custom integrations
+
+## Selected work
+- Infinia Chain (Web3): https://infiniachain.infinialabs.ai/
+- Token2049 Dubai (event concept): https://token2049-dubai.vercel.app/
+- Fasset (FinTech): https://fasset-uae.vercel.app/
+- xPhoto (AI tool): https://xphoto.vercel.app/
+- Arsh Balqees (signage business, Abu Dhabi): https://arshbalqees.com/
+- Falak Bank (banking concept): https://falak-bank.vercel.app/
+- AKC Wallet (stablecoin): https://akc-stablecoin.vercel.app/

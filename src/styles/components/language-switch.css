@@ -1,0 +1,18 @@
+/* ---------- Language toggle ---------- */
+.lang{position:relative;display:flex;height:42px;border-radius:100px;border:1px solid var(--line2);padding:3px;background:rgba(11,10,9,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);direction:ltr;flex:none}
+.lang::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:38px;border-radius:100px;background:var(--ink);transition:transform .6s var(--ease)}
+html[lang=ar] .lang::before{transform:translateX(38px)}
+.lang span[data-l]{position:relative;z-index:1;width:38px;display:grid;place-items:center;font-family:var(--font-mono),monospace;font-size:12px;color:var(--mute);transition:color .4s;letter-spacing:.04em}
+.lang span[data-l=ar]{font-family:var(--font-arabic-text),sans-serif;font-size:16px;font-weight:500}
+html[lang=en] .lang span[data-l=en],html[lang=ar] .lang span[data-l=ar]{color:var(--bg)}
+.lang-wipe{position:fixed;inset:0;z-index:95;pointer-events:none;background:var(--bg);clip-path:inset(100% 0 0 0);display:grid;place-items:center}
+.lang-wipe span{font-size:clamp(40px,8vw,120px);font-weight:600;letter-spacing:-.04em;color:var(--ember)}
+@media (max-width:440px){.nav-call{display:none!important}}
+.lang-wipe{transition:clip-path .55s cubic-bezier(.87,0,.13,1)}
+.lang-wipe span{opacity:0;transition:opacity .3s .2s}
+.lang-wipe.in{clip-path:inset(0 0 0 0)}
+.lang-wipe.in span{opacity:1}
+.lang-wipe.arrive{animation:wipeOut .8s cubic-bezier(.87,0,.13,1) forwards}
+@keyframes wipeOut{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 100% 0)}}
+html[lang=ar] .lang-wipe span{font-family:var(--font-display)}
+html[lang=en] .lang-wipe span{font-family:var(--font-arabic)}

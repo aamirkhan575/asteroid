@@ -1,0 +1,8 @@
+/* ---------- Cursor ---------- */
+.cursor,.cursor-dot{position:fixed;left:0;top:0;z-index:90;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor{width:38px;height:38px;border:1px solid rgba(237,230,218,.5);display:grid;place-items:center;transition:width .4s var(--ease),height .4s var(--ease),background .3s,border-color .3s}
+.cursor span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);opacity:0;transition:opacity .2s}
+.cursor.is-hover{width:84px;height:84px;background:var(--ember);border-color:var(--ember)}
+.cursor.is-hover span{opacity:1}
+.cursor-dot{width:5px;height:5px;background:var(--ember)}
+@media (hover:none),(pointer:coarse){.cursor,.cursor-dot{display:none}}

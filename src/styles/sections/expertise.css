@@ -1,0 +1,16 @@
+/* ---------- Expertise (keyword-rich, genuinely useful copy) ---------- */
+.expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:start}
+.expertise-copy p{font-size:clamp(18px,1.45vw,21px);line-height:1.6;color:#CFC7BB;margin-bottom:22px;max-width:56ch}
+.expertise-copy p:first-child{color:var(--ink)}
+.services-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.service{position:relative;border:1px solid var(--line);border-radius:18px;padding:22px 22px 24px;background:linear-gradient(165deg,rgba(26,22,19,.8),rgba(12,11,10,.75));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .4s,transform .5s var(--ease)}
+.service:hover{border-color:rgba(255,91,31,.45);transform:translateY(-4px)}
+.service h3{font-size:20px;letter-spacing:-.025em;font-weight:600;margin-bottom:8px;display:flex;gap:10px;align-items:center}
+.service h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--ember);box-shadow:0 0 10px var(--ember);flex:none;transform:rotate(45deg)}
+.service p{font-size:15px;color:#A9A195;line-height:1.5}
+.areas{margin-top:46px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.areas .mono{color:var(--mute);margin-inline-end:8px}
+.areas li{list-style:none;border:1px solid var(--line2);border-radius:100px;padding:7px 14px;font-size:14px;color:var(--ink)}
+@media (max-width:1000px){.expertise-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.services-list{grid-template-columns:1fr}}
+.areas ul{display:contents}

@@ -1,0 +1,9 @@
+/* ---------- Section headers ---------- */
+.sec{padding:clamp(100px,16vh,180px) var(--pad)}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:20px 60px;margin-bottom:clamp(48px,8vh,90px);align-items:end}
+.sec-head .idx{color:var(--mute)}
+.sec-head h2{font-size:clamp(44px,7vw,112px);line-height:.92;letter-spacing:-.055em;font-weight:600;font-variation-settings:"opsz" 96}
+.sec-head h2 .serif{font-weight:400;color:var(--ember)}
+.sec-head p{grid-column:2;max-width:46ch;color:#BDB5A9;font-size:clamp(17px,1.35vw,20px)}
+@media (max-width:900px){.sec-head{grid-template-columns:1fr}.sec-head p{grid-column:1}}
+html.js .reveal{opacity:0;transform:translateY(40px)}

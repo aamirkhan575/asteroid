@@ -1,0 +1,37 @@
+{
+  "name": "asteroid-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asteroid \u2014 premium website design agency in Dubai, UAE. Marketing site (Next.js App Router).",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "gsap": "3.13.0",
+    "lenis": "1.3.27",
+    "next": "15.5.29",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "0.170.0",
+    "eslint": "^9.20.0",
+    "eslint-config-next": "15.5.29",
+    "@eslint/eslintrc": "^3.2.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
+  }
+}

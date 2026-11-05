@@ -1,0 +1,61 @@
+/* ---------- Footer: mission control ---------- */
+.mc{position:relative;z-index:2;background:#070605;border-top:1px solid var(--line);overflow:hidden;font-family:var(--display)}
+.mc-floor{position:absolute;left:-50%;right:-50%;bottom:0;height:70%;pointer-events:none;transform:perspective(500px) rotateX(62deg);transform-origin:50% 100%;
+  background-image:linear-gradient(rgba(255,91,31,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(255,91,31,.22) 1px,transparent 1px);background-size:64px 64px;
+  -webkit-mask:linear-gradient(to top,#000 10%,transparent 85%);mask:linear-gradient(to top,#000 10%,transparent 85%);animation:floor 3s linear infinite}
+@keyframes floor{to{background-position:0 64px}}
+.mc-scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px);z-index:1}
+.mc-sweep{position:absolute;left:0;right:0;height:120px;top:-120px;pointer-events:none;background:linear-gradient(to bottom,transparent,rgba(255,91,31,.05),transparent);animation:sweep 7s linear infinite;z-index:1}
+@keyframes sweep{to{top:100%}}
+.mc-in{position:relative;z-index:2;padding:0 var(--pad)}
+.mc-hud{display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.mc-hud b{color:var(--ink);font-weight:500}
+.mc-hud .ok{display:flex;align-items:center;gap:8px;color:#3DDC84}
+.mc-hud .ok::before{content:"";width:7px;height:7px;border-radius:50%;background:#3DDC84;box-shadow:0 0 10px #3DDC84;animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.mc-main{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(30px,5vw,80px);padding:clamp(50px,8vh,90px) 0 40px}
+.mc-title{font-size:clamp(40px,5.4vw,84px);letter-spacing:-.055em;line-height:.92;font-weight:600;margin-bottom:28px;font-variation-settings:"opsz" 96}
+.mc-title .serif{font-weight:400;color:var(--ember)}
+/* terminal */
+.term{border:1px solid var(--line2);border-radius:16px;background:rgba(12,10,9,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow:hidden;box-shadow:0 30px 80px -30px rgba(255,91,31,.25),inset 0 1px 0 rgba(255,255,255,.04)}
+.term-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--mute)}
+.term-bar i{width:10px;height:10px;border-radius:50%;background:#3a332d}
+.term-bar i:first-child{background:#FF5B1F}
+.term-bar span{margin-left:10px;letter-spacing:.06em}
+.term-body{font-family:var(--mono);font-size:13.5px;line-height:1.75;padding:18px 20px 16px;height:300px;overflow-y:auto;color:#CFC7BB;cursor:text}
+.term-body::-webkit-scrollbar{width:6px}.term-body::-webkit-scrollbar-thumb{background:#2a2420;border-radius:6px}
+.term-body .p{color:var(--ember)}
+.term-body .c{color:var(--ink)}
+.term-body .o{color:#9C948A}
+.term-body .g{color:#3DDC84}
+.term-body a{color:#FFB347;text-decoration:underline;text-underline-offset:3px}
+.term-body .chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px}
+.term-body .chips button{font-family:var(--mono);font-size:11px;border:1px solid var(--line2);border-radius:6px;padding:2px 8px;color:var(--ink);transition:.25s}
+.term-body .chips button:hover{background:var(--ember);border-color:var(--ember);color:#160A04}
+.term-in{display:flex;align-items:center;gap:10px}
+.term-in input::placeholder{color:#5A544D}
+.term-in input{flex:1;background:none;border:0;outline:0;color:var(--ink);font:inherit;caret-color:var(--ember)}
+.caret{display:inline-block;width:8px;height:15px;background:var(--ember);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+/* right column modules */
+.mods{display:flex;flex-direction:column;gap:26px}
+.mod .mod-h{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:400;margin-bottom:12px;display:flex;justify-content:space-between}
+.mod-links a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid var(--line);font-size:clamp(20px,1.8vw,26px);letter-spacing:-.03em;font-weight:500;transition:color .3s,padding .5s var(--ease)}
+.mod-links a:last-child{border-bottom:1px solid var(--line)}
+.mod-links a small{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.1em;margin-right:16px}
+.mod-links a .arr{font-family:var(--mono);font-size:14px;color:var(--mute);transition:transform .5s var(--ease),color .3s}
+.mod-links a:hover{color:var(--ember);padding-left:10px}
+.mod-links a:hover .arr{transform:translateX(4px) rotate(-45deg);color:var(--ember)}
+.mod-contact{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mod-contact a{border:1px solid var(--line2);border-radius:14px;padding:14px 16px;transition:border-color .3s,background .3s}
+.mod-contact a:hover{border-color:var(--ember);background:rgba(255,91,31,.08)}
+.mod-contact small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.mod-contact b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+/* particle wordmark */
+.mc-word{position:relative;height:clamp(140px,26vw,440px);margin:10px 0 0}
+.mc-word canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mc-word .hint{position:absolute;right:0;top:0;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.mc-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:20px 0 26px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.mc-bottom a{color:var(--mute);transition:color .3s}.mc-bottom a:hover{color:var(--ember)}
+@media (max-width:1000px){.mc-main{grid-template-columns:1fr}.mc-hud{grid-template-columns:1fr 1fr}.mc-hud span:nth-child(n+4){display:none}}
+@media (max-width:520px){.term-body{height:260px;font-size:12px}.mod-contact{grid-template-columns:1fr}}
+.mod-contact .wide{grid-column:1/-1} address.mod-contact{font-style:normal}

@@ -1,0 +1,5 @@
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .manifesto p.big .w{opacity:1}
+}

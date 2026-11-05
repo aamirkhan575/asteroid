@@ -1,0 +1,12 @@
+/* ---------- Floating WhatsApp ---------- */
+.float-wa{position:fixed;right:22px;bottom:22px;z-index:55;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 40px -8px rgba(37,211,102,.55);transform:scale(0);transition:transform .6s var(--ease)}
+.float-wa.show{transform:scale(1)}
+.float-wa svg{width:30px;height:30px;fill:#fff}
+.float-wa::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(37,211,102,.6);animation:ring 2.4s infinite}
+@keyframes ring{from{transform:scale(.9);opacity:1}to{transform:scale(1.4);opacity:0}}
+.float-wa .tip{position:absolute;right:76px;white-space:nowrap;background:var(--ink);color:var(--bg);padding:9px 14px;border-radius:12px;font-size:14px;font-weight:600;opacity:0;transform:translateX(8px);transition:.4s var(--ease);pointer-events:none}
+.float-wa:hover .tip{opacity:1;transform:none}
+
+/* contact toast (numbers shown as text too) */
+.contact-line{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mute);margin-top:16px}
+.contact-line b{color:var(--ink);font-weight:500}

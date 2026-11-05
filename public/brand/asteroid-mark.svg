@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44"><title>Asteroid mark</title><defs></defs><g transform="translate(1 1) scale(1)">
+<g transform="translate(20 21) rotate(-22)"><path d="M-19 0A19 6 0 0 1 19 0" fill="none" stroke="#FF5B1F" stroke-width="1.6" stroke-linecap="round" opacity=".45"/></g>
+<polygon points="20,7 29,10 34,18 31,29 22,34 12,31 7,22 10,12" fill="#EDE6DA"/>
+<polygon points="20,7 29,10 34,18 22,19" fill="#FFFFFF" opacity=".55"/>
+<polygon points="22,19 34,18 31,29 22,34" fill="#A99F91"/>
+<polygon points="22,19 22,34 12,31 7,22" fill="#CFC5B6"/>
+<circle cx="17" cy="14" r="1.6" fill="#A99F91"/><circle cx="27" cy="25" r="1.2" fill="#7D7468"/>
+<g transform="translate(20 21) rotate(-22)"><path d="M19 0A19 6 0 0 1 -19 0" fill="none" stroke="#FF5B1F" stroke-width="1.6" stroke-linecap="round"/></g>
+<circle cx="37.5" cy="13" r="2.4" fill="#FF5B1F"/></g></svg>

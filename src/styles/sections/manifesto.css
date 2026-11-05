@@ -1,0 +1,7 @@
+/* ---------- Manifesto ---------- */
+.manifesto{padding:clamp(120px,22vh,240px) var(--pad);min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.manifesto .mono{color:var(--ember);margin-bottom:36px}
+.manifesto p.big{font-size:clamp(32px,4.6vw,76px);line-height:1.04;letter-spacing:-.04em;font-weight:500;max-width:21ch;font-variation-settings:"opsz" 72}
+html.js .manifesto p.big .w{opacity:.4;transition:none}
+.manifesto p.big .serif{font-weight:400}
+html.js .manifesto p.big .ember .w{opacity:.62}
